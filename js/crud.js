@@ -2,8 +2,10 @@ let form = document.getElementById("form");
 let input = document.getElementById("input");
 let msg = document.getElementById("msg");
 let posts = document.getElementById("posts");
+const btn = document.querySelector("button");
 
 form.addEventListener("submit", (e) => {
+	btn.innerHTML = "Post";
 	e.preventDefault();
 	formValidation();
 });
@@ -50,6 +52,8 @@ let deletePost = (e) => {
 };
 
 let editPost = (e) => {
+	btn.innerHTML = "";
+	btn.innerHTML = "Edit";
 	input.value = e.parentElement.previousElementSibling.innerHTML;
 	e.parentElement.parentElement.remove();
 };
