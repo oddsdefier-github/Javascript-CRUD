@@ -27,7 +27,7 @@ let data = {};
 
 let acceptData = () => {
 	data["post"] = input.value;
-	console.log(data);
+	console.log(data); 
 	createPost();
 };
 
